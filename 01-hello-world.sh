@@ -1,5 +1,5 @@
 #!/bin/bash
 
-# This is comment 
+# This is the comment, just for information purpose. this line is not going to be executed
 
-echo hello world
+echo "Hello World!"
