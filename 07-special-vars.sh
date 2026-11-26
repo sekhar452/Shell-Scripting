@@ -10,4 +10,7 @@ echo "First Varible Passed: $1"
 
 echo "Script Name: $0"
 
-echo "These are special varibales"
+echo "Real_Path: $(realPath $0)"
+
+echo "Who is running this script: $user"
+
