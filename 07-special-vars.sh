@@ -26,6 +26,9 @@ echo "PID of the command running in the back ground now: $!"
 
 echo "Line Number : $LINENO"
 
+echo $?
+
+
 
 
 
