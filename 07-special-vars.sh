@@ -10,7 +10,7 @@ echo "First Varible Passed: $1"
 
 echo "Script Name: $0"
 
-echo "Real_Path: $(realPath $0)"
+echo "Realpath: $(realPath $0)"
 
-echo "Who is running this script: $user"
+echo "Who is running this script: $USER"
 
