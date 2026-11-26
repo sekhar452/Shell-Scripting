@@ -28,6 +28,8 @@ echo "Line Number : $LINENO"
 
 echo $?
 
+echo "SEONDS : $SECONDS"
+
 
 
 
