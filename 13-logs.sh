@@ -22,9 +22,10 @@ echo "Script started execution at $(date +"%F %T")" &>> $logs_file
 
 validate(){
 
-    if[ $? -ne 0];then
+    if[ $1 -ne 0];then
 
         echo "${2} Is Failed"
+        
         exit 1
     else
         echo "${2} Is Sucess"
