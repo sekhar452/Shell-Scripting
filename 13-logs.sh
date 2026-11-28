@@ -17,7 +17,7 @@ fi
 
 mkdir -p $logs_folder
 
-echo "Script started execution at $(date +"%F %T")" &>> $logs_file
+echo "Script started execution at $(date +"%F %T")" | tee -a $logs_file
 
 
 validate(){
@@ -41,4 +41,4 @@ dnf install mysql -y &>> logs_file
 
 validate $? "mysql"
 
-echo "Script ended execution at $(date +"%F %T")" &>> $logs_file
+echo "Script ended execution at $(date +"%F %T")" | tee -a $logs_file
