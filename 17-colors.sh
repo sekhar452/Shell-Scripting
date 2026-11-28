@@ -24,19 +24,7 @@ mkdir -p $logs_folder
 
 echo "Script started execution at $(date +"%F %T")" | tee -a $logs_file
 
-for package in $@
 
-do
-    dnf list installed $package &>> logs_file
-    if [ $? -ne 0 ];then
-        echo -e "Going to install: ${package}"
-        dnf install $package -y &>> logs_file
-        validate $? "Installing:${package}"
-    else   
-         echo "${package} already installed...SKIPPING"
-    fi
-    
-done
 
 validate(){
 
