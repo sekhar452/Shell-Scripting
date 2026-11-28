@@ -22,15 +22,15 @@ echo "Script started execution at $(date +"%F %T")" &>> $logs_file
 
 validate(){
 
-    if [ $1 -ne 0]; then
+        if [ $1 -ne 0]; then
 
-        echo "${2} Is Failed"
-        
-        exit 1
-    else
-        echo "${2} Is Sucess"
+            echo "${2} Is Failed" | tee -a $logs_file
+            
+            exit 1
+        else
+            echo "${2} Is Sucess" | tee -a $logs_file 
 
-    fi
+        fi
 }
 
 dnf install nginx -y &>> logs_file
